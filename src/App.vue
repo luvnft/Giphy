@@ -1,17 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="container mx-auto p-4">
+    <TrendingGifs />
+    <SearchGifs />
+    <!-- GifDetails will be dynamically displayed based on user interaction -->
+    <GifDetails :selectedGif="selectedGif" v-if="selectedGif" />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TrendingGifs from "@/components/TrendingGifs.vue";
+import SearchGifs from "@/components/SearchGifs.vue";
+import GifDetails from "@/components/GifDetails.vue";
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    TrendingGifs,
+    SearchGifs,
+    GifDetails,
+  },
+  data() {
+    return {
+      selectedGif: null,
+    };
+  },
+};
 </script>
 
 <style>
