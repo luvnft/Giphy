@@ -1,6 +1,6 @@
 <template>
   <div class="bg-black text-white">
-    <h1 class="text-4xl font-bold mb-4">🅰️GIF</h1>
+    <h1 class="text-4xl font-bold mb-4">🅰️-TRENDING GIFS</h1>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       <div v-for="gif in gifs" :key="gif.id" @click="expandGif(gif)" class="border-white border">
         <img
@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="mt-4">
-      <p>Trending Giphy GIFs for your Arvrtising campaign.</p>
+      <p>Description section below the Trending GIFs.</p>
     </div>
     <button @click="expandGif(selectedGif)">Expand GIF</button>
 
